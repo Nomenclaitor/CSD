@@ -1,0 +1,25 @@
+
+Pool1
+
+kidSwims    No inst swimming    kidsSwimming        nothing
+kidRests    Nothing             kidsSwimming        notifyAll
+instSwims   Nothing             instSwimming        notifyAll
+instRests   Kids Swimming       instSwimming        nothing
+
+-------------------------------------------------------------------------
+
+Pool2
+
+kidSwims    + Exceeds KI        kidsSwimming        nothing
+kidRests    Nothing             kidsSwimming        notifyAll
+instSwims   Nothing             instSwimming        notifyAll
+instRests   + Exceeds KI        instSwimming        nothing
+
+-------------------------------------------------------------------------
+
+Pool3
+
+kidSwims    + max cap           kidSwimming         nothing
+kidRests    Nothing             kidSwimming         notifyAll
+instSwims   Nothing             instSwimming        notifyAll
+instRests   + max cap           instSwimming        nothing
