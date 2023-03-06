@@ -48,8 +48,8 @@ public class PPhilo extends JPanel implements ActionListener {
             break;
         case 4: 
             System.out.println("Limited capacity Dining Room.- TO BE IMPLEMENTED");
-            t = new RegularTable(sman);
-            for (i=0; i<5; i++) philo[i]=new Philo(i,cycles,delay,t);
+            t = new LimitedTable(sman);
+            for (i=0; i<5; i++) philo[i]=new LimitedPhilo(i,cycles,delay,t);
             break;
         }
         for (i=0; i<5; i++) philo[i].start();
