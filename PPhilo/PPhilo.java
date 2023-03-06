@@ -27,7 +27,8 @@ public class PPhilo extends JPanel implements ActionListener {
         case 1: 
             System.out.println("Assimetry (last/but last).- TO BE IMPLEMENTED");
             t = new RegularTable(sman);
-            for (i=0; i<5; i++) philo[i]=new Philo(i,cycles,delay,t); 
+            for (i=0; i<4; i++) philo[i]=new Philo(i,cycles,delay,t);
+            philo[4] = new LefthandedPhilo(4, cycles, delay, t);
             break;
         case 2: 
             System.out.println("Assimetry (even/odd).- TO BE IMPLEMENTED");
