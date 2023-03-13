@@ -44,8 +44,10 @@ public class Terrain3 implements Terrain{
             v.turn(a);
             Pos org = v.getPos(a);
             Pos dest = v.dest(a);
-            while (v.occupied(dest)) {              // Wait condition (while)
-                if (!conditions[dest.x][dest.y].await(300, TimeUnit.MILLISECONDS)) { // Waiting condition
+            while (v.occupied(dest)) {  // Wait condition (while)
+                // condition returns false if time elapses and has not received an go ahead clearance
+                // condition to wait uppon
+                if (!conditions[dest.x][dest.y].await(300, TimeUnit.MILLISECONDS)) {
                     v.chgDir(a);
                     dest = v.dest(a);
                 }
